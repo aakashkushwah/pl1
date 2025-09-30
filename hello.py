@@ -63,8 +63,61 @@ print(f'{name} is {age} years old.')
 # else:
 #     print(f'{x} is equal to {y}.')
 import time
-bs = 10
+bs = 1
 while bs > 0:
     bs = bs -1
     time.sleep(1)
     print(bs)
+
+words = ['cat', 'window', 'defenestrate']
+for w in words:
+    print(w, len(w))
+for w in words:
+    print(w, end=', ')
+print()
+print(', '.join(words))
+
+# for i, w in enumerate(words):
+#     print(w, end=' ')
+# print()  # Ad
+print('AK 1')
+users = {'Hans': 'active', 'Éléonore': 'inactive', '景太': 'active'}
+
+dict_of_users = {}
+dict_of_users[tuple(sorted(users.items()))] = True
+print(dict_of_users)
+
+for user, status in users.copy().items():
+    if status == 'inactive':
+        del users[user]
+
+for user in users.keys():
+    print(user)
+
+active_users = {}
+for user, status in users.items():
+    if status == 'active':
+        active_users[user] = status
+
+for user, status in active_users.items():
+    print(user, status)
+
+print()
+
+for i in range(5):
+    print(i)
+
+for n in range(2,10):
+    for x in range(2,n):
+        if n % x == 0:
+            print(n, 'equals', x, '*', n//x)
+            break
+    else:
+        print(n, 'is a prime number')
+
+b = 256
+c = 56
+print(b//c)
+
+def fib(n):    # write Fibonacci series up to n
+    pass
